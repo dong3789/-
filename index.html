@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <style>
-        
+
         h2 {
             padding: 5% 0 0 0 ;
         }
@@ -43,11 +43,22 @@
 
         
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
 </head>
 <body>
         <button class="내용">내용</button><button class="단어">단어</button>
         
         <h2>정처기 실기</h2>
+
+        <h3>axios 테스트</h3>
+        <div>
+            <input type="email" placeholder="email을 입력해주세용" id="email" value="eve.holt@reqres.in" >
+        </div>
+        <div>
+            <input type="password" placeholder="비밀번호를 입력해주세용" id="pw" value="cityslicka">
+        </div>
+
+        <input type="button" onclick='onLoggin()' value="로그인">
 
         select 학번, 이름 from 학생 where 학년 in (3, 4);
 
@@ -172,6 +183,35 @@
         });
 
     </script>
-    
+
+
+    <script>
+
+        function onLoggin(){
+
+            const email = document.getElementById("email");
+            const password = document.getElementById('pw')
+            axios({
+                method:"POST",
+                url: 'https://reqres.in/api/login',
+                data:{
+                    "email": email.value,
+                    "password": password.value
+                }
+            }).then((res)=>{
+                if(res.status == 200){
+                    alert("야호 성공");
+                }else{
+                    alert("에러다 에러");
+                }
+                console.log(res);
+            }).catch(error=>{
+                console.log(error);
+                throw new Error(error);
+            });
+        }
+
+
+    </script>
 </body>
 </html>
