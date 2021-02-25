@@ -7,9 +7,12 @@
     <title>Document</title>
 
     <style>
-        .중요 {
-            color : red;
+        
+        h2 {
+            padding: 5% 0 0 0 ;
         }
+
+
 
         button, input {
             -moz-appearance:none; /* Firefox */
@@ -21,6 +24,10 @@
         button {
             width: 100px;
             height: 5%;
+        }
+
+        .중요 {
+            color : red;
         }
 
         .내용 {
@@ -38,8 +45,8 @@
     </style>
 </head>
 <body>
-        <button class="내용">내용</button><button class="단어">단어</button> 
-
+        <button class="내용">내용</button><button class="단어">단어</button>
+        
         <h2>정처기 실기</h2>
 
         select 학번, 이름 from 학생 where 학년 in (3, 4);
@@ -161,7 +168,7 @@
         });        
         wordBtn.addEventListener('click', function(){
             
-            h4.forEach(e => e.style.display != 'none' ? [ wordBtn.innerText="보임", e.style.display = 'none', e.innerHTML = tagbr ] : [ wordBtn.innerText="안보임", e.style.display = 'block' ]);
+            h4.forEach(e => e.style.display != 'none' ? [ wordBtn.innerText="보임", e.style.display = 'none', e.append = tagbr ] : [ wordBtn.innerText="안보임", e.style.display = 'block' ]);
         });
 
     </script>
