@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .중요 {
+            color : red;
+        }
+
+        button {
+            width: 5%;
+            height: 5%;
+        }
+
+        .내용 {
+            position: fixed;            
+            top: 0px;
+            left: 0px;
+        }
+        .단어 {
+            position: fixed;
+            top: 0px;
+            left: 110px;
+        }
+
+        
+    </style>
+</head>
+<body>
+        <button class="내용">내용</button><button class="단어">단어</button> <br>
+
+        select 학번, 이름 from 학생 where 학년 in (3, 4);
+
+        ROLLBACK : 트랜젝션 제어어로 트랜젝션의 처리 과정에서 발생한 변경 사항을 취소하고 트랜젝션 과정을 종료함. 트랜젝션으로 인한 하나의 묶음 처리가 시작되기 이전 상태로 되돌린다. 이전 commit 한 곳 까지 되돌린다. 
+
+        select 과목이름, min(점수) as 최소점수, max(점수) as 최대점수 from 성적 group by 과목이름 having avg(점수) >= 90
+
+        직관성 : 누구나 쉽게 이해하고 사용할 수 있어야 한다.
+
+        alter TABLE 학생 add 주소 varchar(20);
+
+        <h4>프로토콜의 3요소</h4> 
+        <div> 구문 (데이터를 어떻게 구성, 코딩, 신호 레벨), 의미(데이터를 구체적으로 어떻게 제어, 처리방법, 에러 발생시 정보), 타이밍(통신이 이뤄질 때 속도 조절, 데이터가 동시에 통신할 때 순서 관리)
+            <pre>
+            - 물리적 측면 : 자료 전송에 쓰이는 전송매체, 접속용 단자 및 전송 신호, 회신 규격 등을 말한다.
+
+            - 논리적 측면 : 프레임의 구성, 프레임 안에 있는 각 항목의 뜻과 기능, 자료 전송의 절차등을 담는다.
+            </pre>    
+        </div>
+
+        <h4>ERD</h4> 
+        <div> 개체, 속성, 관계</div>
+
+        <h4>보안</h4> 
+        <div>기밀성, 무결성, 가용성</div>
+
+
+        <h4>릴레이션 이상현상</h4> 
+        <div> 삽입 이상, 삭제 이상, 갱신 이상 </div>
+
+        <h4>객체지향프로그램 OOP</h4> 
+        <div> 캡슐화, 상속, 추상화, 다형성, 정보은닉</div>
+
+        <h4>테스트 실행 여부 테스트</h4> 
+        <div>정적 테스트(워크스루, 인스펙션, 코드검사 - 프로그램 실행하지 않고 명세서나 소스 코드로 분석), 동적 테스트(블랙박스 테스트, 화이트박스 테스트 - 프로그램 실행하면서 오류 찾음)</div>
+
+        <h4>테스트 기반 테스트</h4>
+        <div>
+            <pre>
+            - 명세 기반 테스트(동등 분할, 경계값 분석 - 사용자 요구사항에 따라 명세를 빠짐 없이 테스트 케이스로 만들어 구현하는지 테스트)
+            - 구조 기반 테스트(구문 기반, 결정 기반, 조건 기반 - 소프트웨어 내부의 논리 흐름에 따라 테스트 케이스를 작성하고 확인 테스트)
+            - 경험 기반 테스트(에러 추정, 체크 리스트, 탐색적 테스팅 - 유사 소프트웨어나 기술 등에 대한 테스터의 경험을 기반으로 수행하는 테스트, 사용자의 요구사항에 대한 명세가 부족하거나 테스트 시간에 제약이 있는 경우 수행하면 효과적)
+            </pre>
+        </div>
+        <h4>시각 기반 테스트</h4> 
+        <div>검증 테스트(개발자 시각, 제품이 명세서대로 되었는지), 확인 테스트(사용자 요구)</div>
+
+        <h4>목적 테스트</h4> 
+        <div>회복(결함 실패 후 복구), 안전(불법적 침입 보호), 강도(과부화 시 정상 실행), 성능(실시간 성능, 효율), 구조(논리적 경로, 코드 복잡도), 회귀(변경, 수정 코드에 결함 확인), 병행(변경 sw와 기존 sw에 동일한 데이터 입력해 결과 비교)</div>
+
+        <h4>UML</h4> 
+        <div>시스템 개발자와 고객 또는 개발자 상호간의 의사소통이 원활하게 이루어지도록 표준화한 대표적인 객체지향 모델링 언어</div>
+
+        <h4 class="중요">UML의 구성요소</h4> 
+        <div> 사물, 관계, 다이어그램 </div>
+
+        <h4>IPv4의 전송방식</h4> 
+        <div>유니캐스트, 멀티캐스트, 브로드캐스트</div>
+
+        <h4>XML</h4> 
+        <div> W3C에 의해 개발, 웹브라우저간 호환 되지 않는 문제와 SGML 의 복잡함을 해결하기 위해 개발된 다목적 마크업 언어 </div>
+
+        <h4>JSON</h4> 
+        <div>개방형 표준 포맷, Ajax에서 많이 사용. XML을 대체하는 주요 데이터 포맷.</div>
+
+        <h4>XrML</h4> 
+        <div>디지털 콘텐츠, 웹 서비스 권리 조건을 표현한 XML 기반의 언어. </div> 
+
+        <h4>PL/SQL</h4> 
+        <div>표준 SQL을 바탕으로 Oracle에서 개발한 데이터 조작 언어로 확장 기능이 우수</div>
+
+        <h4 class="중요">Ajax</h4> 
+        <div> 브라우저가 갖고 있는 XMLHttpRequest 객체를 이용해 새로 고침 없이 페이지 일부분 데이터 로드</div>
+
+        <h4>EAI(연계 솔루션)</h4> 
+        <div>기업에서 운영되는 서로 다른 플랫폼, 애플리케이션 들 간의 정보 전달, 연계, 통합을 가능하게 해주는 솔루션. 송수신 시스템에 설치되는 어댑터를 사용하는 간접 연계 방식 기술, 데이터 병목 현상 최소화
+            <pre>
+            - Point to Point : 가장 기본적, 변경 재사용 어려움
+            - Hub & Spoke : 허브 시스템 확장, 유지보수 용이
+            - Message Bus : 미들웨어 두고 처리, 뛰어난 확장성
+            - Hybrid : Hub & Spoke + ESB, 병목 현상 최소화
+            </pre>
+        </div>
+
+        <h4>랜드어택</h4>
+        <div>공격자가 패킷의 출발지 주소나 포트를 임의 변경. 공격 대상 컴퓨터 속도를 느리게 하거나 동작을 마비해서 서비스 거부 상태 빠짐.</div>
+
+        <h4 class="중요">스머핑/스머핑공격</h4>
+        <div>출발지 주소를 공격 대상의 IP로 설정해 희생자에게 대량의 트래픽을 발생시켜 마비시키는 DoS 공격</div>
+
+        <h4>제로데이 공격</h4>
+        <div>컴퓨터 소프트웨어의 취약점을 공격하는 기술적 위협, 해당 취약점에 대한 패치가 나오지 않은 시점에서 이뤄지는 공격</div>
+
+        <h4 class="중요">랜섬웨어(ransomware)</h4>
+        <div>몸값과 소프트웨어 합성, PC 자료 암호화해서 피해자에게 돈을 지급하도록 강요하는 악성코드</div>
+
+        <h4>APT, 지능형 지속공격</h4>
+        <div>특정 타겟을 목표로 하여 다양한 수단을 통한 지속적, 지능적 맞춤형 공격. </div>
+
+        <h4>CSRF / 사이트 간 요청 위조</h4>
+        <div>웹 앱의 취약점. 사용자가 자신의 의지와 무관하게 <b>공격자가 의도한 행동을 해서 특정 웹페이지를 보안에 취약하게 하거나</b> 수정, 삭제 작업을 하게 만듦. </div>
+
+        <h4 class="중요">DDoS / 분산 서비스 거부 </h4>
+        <div>여러 대의 공격자를 분산 배치하여 동시에 동작하게 해서 특정 사이트를 공격. </div>
+
+
+    <script>
+        const btn = document.querySelector('.내용');
+        const wordBtn = document.querySelector('.단어');
+        const div = document.querySelectorAll('div');
+        const h4 = document.querySelectorAll('h4');
+        const tagbr = "<input type='text'>";
+        const line = "<br>";
+
+        btn.addEventListener('click', function(){
+            
+            div.forEach(e => e.style.display != 'none' ? [ btn.innerText="보임", e.style.display = 'none' ] : [ btn.innerText="안보임", e.style.display = 'block' ]);
+        });        
+        wordBtn.addEventListener('click', function(){
+            
+            h4.forEach(e => e.style.display != 'none' ? [ wordBtn.innerText="보임", e.style.display = 'none', e.innerHTML = tagbr ] : [ wordBtn.innerText="안보임", e.style.display = 'block' ]);
+        });
+
+    </script>
+    
+</body>
+</html>
