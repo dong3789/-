@@ -5,77 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-
-        h2 {
-            padding: 5% 0 0 0 ;
-        }
-
-
-
-        button, input {
-            -moz-appearance:none; /* Firefox */
-            -webkit-appearance:none; /* Safari and Chrome */
-            appearance:none;
-            border-radius: 0;  /* for iOS input button */
-            border: 1px solid #D0D0D0;
-        }
-        button {
-            width: 100px;
-            height: 5%;
-        }
-
-        .중요 {
-            color : red;
-        }
-
-        .내용 {
-            position: fixed;                    
-            top: 0px;
-            left: 0px;
-        }
-        .단어 {
-            position: fixed;
-            top: 0px;
-            left: 110px;
-        }
-
-        
-    </style>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
 </head>
 <body>
-        <button class="내용">내용</button><button class="단어">단어</button>
+    <button class="content">내용</button><button class="word">단어</button>    
+    
+    <nav>
+        <h2><img src="https://callifont.com/wp-content/uploads/2017/06/callifont_pilsueng.png" width="100px">정처기 실기</h2>
         
-        <h2>정처기 실기</h2>
-
-        <h3>axios 테스트</h3>
-        <div>
-            <input type="email" placeholder="email을 입력해주세용" id="email" value="eve.holt@reqres.in" >
-        </div>
-        <div>
-            <input type="password" placeholder="비밀번호를 입력해주세용" id="pw" value="cityslicka">
-        </div>
-
-        <input type="button" onclick='onLoggin()' value="로그인">
-
-        select 학번, 이름 from 학생 where 학년 in (3, 4);
-
-        ROLLBACK : 트랜젝션 제어어로 트랜젝션의 처리 과정에서 발생한 변경 사항을 취소하고 트랜젝션 과정을 종료함. 트랜젝션으로 인한 하나의 묶음 처리가 시작되기 이전 상태로 되돌린다. 이전 commit 한 곳 까지 되돌린다. 
-
-        select 과목이름, min(점수) as 최소점수, max(점수) as 최대점수 from 성적 group by 과목이름 having avg(점수) >= 90
-
-        직관성 : 누구나 쉽게 이해하고 사용할 수 있어야 한다.
-
-        alter TABLE 학생 add 주소 varchar(20);
+    </nav>
+    <section>
 
         <h4>프로토콜의 3요소</h4> 
         <div> 구문 (데이터를 어떻게 구성, 코딩, 신호 레벨), 의미(데이터를 구체적으로 어떻게 제어, 처리방법, 에러 발생시 정보), 타이밍(통신이 이뤄질 때 속도 조절, 데이터가 동시에 통신할 때 순서 관리)
             <pre>
-            - 물리적 측면 : 자료 전송에 쓰이는 전송매체, 접속용 단자 및 전송 신호, 회신 규격 등을 말한다.
+    - 물리적 측면 : 자료 전송에 쓰이는 전송매체, 접속용 단자 및 전송 신호, 회신 규격 등을 말한다.
 
-            - 논리적 측면 : 프레임의 구성, 프레임 안에 있는 각 항목의 뜻과 기능, 자료 전송의 절차등을 담는다.
+    - 논리적 측면 : 프레임의 구성, 프레임 안에 있는 각 항목의 뜻과 기능, 자료 전송의 절차등을 담는다.
             </pre>    
         </div>
 
@@ -98,16 +47,34 @@
         <h4>테스트 기반 테스트</h4>
         <div>
             <pre>
-            - 명세 기반 테스트(동등 분할, 경계값 분석 - 사용자 요구사항에 따라 명세를 빠짐 없이 테스트 케이스로 만들어 구현하는지 테스트)
-            - 구조 기반 테스트(구문 기반, 결정 기반, 조건 기반 - 소프트웨어 내부의 논리 흐름에 따라 테스트 케이스를 작성하고 확인 테스트)
-            - 경험 기반 테스트(에러 추정, 체크 리스트, 탐색적 테스팅 - 유사 소프트웨어나 기술 등에 대한 테스터의 경험을 기반으로 수행하는 테스트, 사용자의 요구사항에 대한 명세가 부족하거나 테스트 시간에 제약이 있는 경우 수행하면 효과적)
+    - 명세 기반 테스트(동등 분할, 경계값 분석 - 사용자 요구사항에 따라 명세를 빠짐 없이 테스트 케이스로 만들어 구현하는지 테스트)
+
+    - 구조 기반 테스트(구문 기반, 결정 기반, 조건 기반 - 소프트웨어 내부의 논리 흐름에 따라 테스트 케이스를 작성하고 확인 테스트)
+
+    - 경험 기반 테스트(에러 추정, 체크 리스트, 탐색적 테스팅 - 유사 소프트웨어나 기술 등에 대한 테스터의 경험을 기반으로 수행하는 테스트, 사용자의 요구사항에 대한 명세가 부족하거나 테스트 시간에 제약이 있는 경우 수행하면 효과적)
             </pre>
         </div>
         <h4>시각 기반 테스트</h4> 
         <div>검증 테스트(개발자 시각, 제품이 명세서대로 되었는지), 확인 테스트(사용자 요구)</div>
 
         <h4>목적 테스트</h4> 
-        <div>회복(결함 실패 후 복구), 안전(불법적 침입 보호), 강도(과부화 시 정상 실행), 성능(실시간 성능, 효율), 구조(논리적 경로, 코드 복잡도), 회귀(변경, 수정 코드에 결함 확인), 병행(변경 sw와 기존 sw에 동일한 데이터 입력해 결과 비교)</div>
+        <div>
+            <pre>
+    - 회복(결함 실패 후 복구)
+
+    - 안전(불법적 침입 보호)
+    
+    - 강도(과부화 시 정상 실행)
+    
+    - 성능(실시간 성능, 효율)
+    
+    - 구조(논리적 경로, 코드 복잡도)
+    
+    - 회귀(변경, 수정 코드에 결함 확인)
+    
+    - 병행(변경 sw와 기존 sw에 동일한 데이터 입력해 결과 비교)
+            </pre>
+        </div>
 
         <h4>UML</h4> 
         <div>시스템 개발자와 고객 또는 개발자 상호간의 의사소통이 원활하게 이루어지도록 표준화한 대표적인 객체지향 모델링 언어</div>
@@ -164,54 +131,9 @@
         <h4 class="중요">DDoS / 분산 서비스 거부 </h4>
         <div>여러 대의 공격자를 분산 배치하여 동시에 동작하게 해서 특정 사이트를 공격. </div>
 
-
-    <script>
-        const btn = document.querySelector('.내용');
-        const wordBtn = document.querySelector('.단어');
-        const div = document.querySelectorAll('div');
-        const h4 = document.querySelectorAll('h4');
-        const tagbr = "<input type='text'>";
-        const line = "<br>";
-
-        btn.addEventListener('click', function(){
-            
-            div.forEach(e => e.style.display != 'none' ? [ btn.innerText="보임", e.style.display = 'none' ] : [ btn.innerText="안보임", e.style.display = 'block' ]);
-        });        
-        wordBtn.addEventListener('click', function(){
-            
-            h4.forEach(e => e.style.display != 'none' ? [ wordBtn.innerText="보임", e.style.display = 'none', e.append = tagbr ] : [ wordBtn.innerText="안보임", e.style.display = 'block' ]);
-        });
-
-    </script>
+    </section>
 
 
-    <script>
-
-        function onLoggin(){
-
-            const email = document.getElementById("email");
-            const password = document.getElementById('pw')
-            axios({
-                method:"POST",
-                url: 'https://reqres.in/api/login',
-                data:{
-                    "email": email.value,
-                    "password": password.value
-                }
-            }).then((res)=>{
-                if(res.status == 200){
-                    alert("야호 성공");
-                }else{
-                    alert("에러다 에러");
-                }
-                console.log(res);
-            }).catch(error=>{
-                console.log(error);
-                throw new Error(error);
-            });
-        }
-
-
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
