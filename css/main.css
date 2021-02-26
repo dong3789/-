@@ -12,7 +12,7 @@ h2 {
 }
 
 h4 {
-    margin : 0 4% 0 0;
+    margin : 0 0 0 0;
 }
 
 
@@ -38,8 +38,9 @@ pre {
 
 
 section div {
-    margin-bottom : 8%;        
+    margin-bottom : 2%;        
     font-weight: 300;
+    
 }
 
 section pre {
@@ -65,4 +66,10 @@ section div:hover{
     position: fixed;
     top: 0px;
     left: 110px;
+}
+
+@media (max-width: 300px) {
+    section div {
+        margin-bottom : 15%;        
+    }
 }
