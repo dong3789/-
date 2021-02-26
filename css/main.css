@@ -59,6 +59,7 @@ section div.contents {
     margin-bottom : 2%;        
     font-weight: 300;
     cursor: pointer;
+    border-bottom: 1px solid black;
 }
 
 section pre {
