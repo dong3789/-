@@ -11,6 +11,10 @@ h2 {
     padding: 5% 0 0 0 ;
 }
 
+h4 {
+    margin : 0 4% 0 0;
+}
+
 
 
 button, input {
@@ -34,7 +38,7 @@ pre {
 
 
 section div {
-    margin-bottom : 30px;        
+    margin-bottom : 8%;        
     font-weight: 300;
 }
 
