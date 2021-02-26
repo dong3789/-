@@ -1,18 +1,31 @@
-const btn = document.querySelector('.content');
-const wordBtn = document.querySelector('.word');
-const div = document.querySelectorAll('div');
+const btn = document.querySelector('.contentBtn');
+const wordBtn = document.querySelector('.wordBtn');
+const div = document.querySelectorAll('.contents');
 const h4 = document.querySelectorAll('h4');
 const tagbr = "<input type='text'>";
+let addInput = document.createElement('div');
+addInput.innerHTML = "hi";
 const line = "<br>";
 
 btn.addEventListener('click', function(){
-    
-    div.forEach(e => e.style.display != 'none' ? [ btn.innerText="보임", e.style.display = 'none' ] : [ btn.innerText="안보임", e.style.display = 'block' ]);
+    div.forEach(e => e.style.display != 'none' ? [ btn.innerText="보임", e.style.display = 'none' ] : [ btn.innerText="내용", e.style.display = 'block' ]);
 });        
 wordBtn.addEventListener('click', function(){
     
-    h4.forEach(e => e.style.display != 'none' ? [ wordBtn.innerText="보임", e.style.display = 'none', e.append = tagbr ] : [ wordBtn.innerText="안보임", e.style.display = 'block' ]);
+    h4.forEach(e => e.style.display != 'none' ? [ wordBtn.innerText="보임", e.style.display = 'none' ] : [ wordBtn.innerText="안보임", e.style.display = 'block' ]);
 });
+
+h4.forEach(
+    e => e.addEventListener('click', function(){
+        this.nextElementSibling.style.display != 'none' ? this.nextElementSibling.style.display = 'none' : this.nextElementSibling.style.display = 'block';
+    })
+);
+
+div.forEach(
+    e => e.addEventListener('click', function(){
+        this.previousElementSibling.style.display != 'none' ? this.previousElementSibling.style.display = 'none' : this.previousElementSibling.style.display = 'block';
+    })
+);
 
 
 function onLoggin(){

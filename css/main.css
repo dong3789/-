@@ -12,10 +12,29 @@ h2 {
 }
 
 h4 {
-    margin : 0 0 0 0;
+    margin : 3% 0 0 0;
+    cursor: pointer;
 }
 
+.btns {
+    text-align: center; 
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    width: 95%;
+    height: 7%;
+    display: inline-block;
 
+}
+
+b {
+    color: blue;
+}
+
+button {
+     width: 70px;
+     height: 30px;
+}
 
 button, input {
     -moz-appearance:none; /* Firefox */
@@ -24,23 +43,21 @@ button, input {
     border-radius: 0;  /* for iOS input button */
     border: 1px solid #D0D0D0;
 }
-button {
-    width: 100px;
-    height: 5%;
-}
 
 pre {
     background-color: #E6E6FA;
-    padding:10px;
+    padding: 20px 10px 10px 10px;
     overflow: auto;
     white-space: pre-wrap;
 }
 
-
-section div {
+section {
+    margin : 3% 0 10% 0;
+}
+section div.contents {
     margin-bottom : 2%;        
     font-weight: 300;
-    
+    cursor: pointer;
 }
 
 section pre {
@@ -53,23 +70,12 @@ section div:hover{
     background-color: rgba(169, 169, 169, 0.527);
 }
 
-.중요 {
+.important {
     color : red;
 }
 
-.내용 {
-    position: fixed;                    
-    top: 0px;
-    left: 0px;
-}
-.단어 {
-    position: fixed;
-    top: 0px;
-    left: 110px;
-}
-
-@media (max-width: 300px) {
+@media (max-width: 800px) {
     section div {
-        margin-bottom : 15%;        
+        margin-bottom : 8%;
     }
 }

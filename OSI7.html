@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="javascript:history.back();">뒤로가기</button>
+        <section>
+        <table border="1">
+            <th>계층</th>
+            <th>이름</th>
+            <th>내용</th>
+            <th>장치</th>
+            <th>데이터 단위</th>
+            <tr>
+                <td>1</td>
+                <td>물리 / Physical</td>
+                <td>실제 장치들을 연결하기 위해 - 기계적인 항목 + 전압, 신호 방식 등 - 전기적인 항목</td>
+                <td>리피터 : 입력 신호 증폭 허브</td>
+                <td>비트</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>데이터링크 / DataLink</td>
+                <td>오류 검출 및 수정 <br> 
+                    데이터를 전송하는 단위로 분할 <br>
+                    각종 흐름, 순서 제어 <br>
+                    프레임의 동기화 기능
+                </td>
+                <td>브리지 : 세그먼트 연결, 트래픽 관리<br>
+                    스위치</td>
+                <td>프레임</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>네트워크
+                    Network
+                </td>
+                <td>트래픽이 집중되지 않도록 하는 혼잡제어<br>
+                    패킷의 분할과 병합, 인터네트워킹<br>
+                    경로설정(Routing)
+                </td>
+
+                <td>라우터 : 대규모<br>
+                    LAN을 연결해주는 망 연동장치 정보를 전송하기 위해<br>
+                    경로를 설정하는 역할 제공
+                </td>    
+                <td>패킷</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>전송 / 
+                    Transport
+                </td>
+                <td>호스트 사이에서 실행되는 프로세스 형태<br>
+                    시스템 콜 형태로 상위 계층에 제공<br>
+                    종단 시스템(End-to-End) 간의 투명한 데이터 전송 가능<br>
+                    하위 3계층과 상위 3계층의 인터페이스 담당
+                </td>
+                <td>게이트웨이</td>
+                <td>세그먼트</t>
+            </tr>   
+            <tr>
+                <td>5</td>
+                <td>세션 / 
+                    Session 
+                </td>
+                <td>사용자 간의 대화를 제어하는 대화 제어자<br>
+                    동기점(Synchronization Point)<br>
+                    동기점은 오류가 있는 데이터의 회복을 위해 사용하는 것
+                </td>
+                <td>데이터</td>
+                <td>메시지</td>
+            </tr> 
+            <tr>
+                <td>6</td>
+                <td>표현 / 
+                    Presentation
+                </td>
+                <td>응용 계층으로부터 받은 데이터를 세션 계층에 보내기 전에 통신에 적당한 형태로 변환<br>
+                    데이터의 암호화와 해독<br>
+                    압축과 압축해제
+                </td>
+                <td>데이터</td>
+                <td>메시지</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>응용 / 
+                    Application</td>
+                <td>사용자에게 편리한 환경 제공<br>
+                    전자우편, 웹, 파일 전송 등과 같은 응용프로그램
+                </td>
+                <td>데이터</td>
+                <td>메시지</td>
+            </tr>        
+        </table>
+
+        <table border="1">
+            <th>계층</th>
+            <th>이름</th>
+            <th>관련 프로토콜</th>
+            <tr>
+                <td>1</td>
+                <td>물리</td>
+                <td>10BASE-T<br>
+                    10BASE-TX<br>
+                    DSL, X.21
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>데이터링크</td>
+                <td>이더넷 : LAN을 위해 개발된 기술. 고유한 MAC 주소 CSMA/CD 방식 이용 <br>
+                    토큰 링 : IEEE 802.5, FDDI : 광섬유, ATM : 셀릴레이, CSMA/CD, CRC
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>네트워크</td>
+                <td>IP : 데이터 세그먼트를 패킷으로 만듦, ICMP : ping<br>
+                    ARP : IP주소를 물리적 하드웨어로 변경, RARP<br>
+                    IGMP, BGP
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>전송</td>
+                <td>TCP, UDP : TCP에 비해 빠름</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>세션</td>
+                <td>SSL<br>
+                    TLS<br>
+                    NetBIOS
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>표현</td>
+                <td>SMB(SAMBA) : 다른 시스템(리눅스)의 디스크나 프린터 등의 지원을 공유할 수 있도록. 현재는 SMB가 확장된 CIFS라 부른다. <br>
+                    AFP, ASN1
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>응용</td>
+                <td>HTTP(80), HTTPS(443), SMTP(25), POP3(110), IMAP(143), DNS(53)<br>
+                    NFS : RPC 프로토콜 기반으로 작동, 보안에 취약<br>
+                    유즈넷 : 텍스트 형태 토론 자유게시판, IRC : 실시간 채팅 프로토콜, 고퍼 : 인터넷 기반 문서 검색 시스템<br>
+                    FTP(21-데이터 전송 제어 신호 주고 받기, 20-실제 데이터 전송에 사용)<br>
+                    put-파일업로드, get-파일다운로드, delete-파일삭제, rename-파일이름변경<br>
+                    TELNET(23), SSH(22) : 패킷 암호화, 안전한 원격 로그인<br>
+                    인증파일(authorized_keys)생성 시 패스워드 없이 로그인 가능
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
