@@ -18,25 +18,25 @@ btn.addEventListener('click', function(){
     div.forEach(e => e.style.display != 'none' ? [ btn.innerText="보임", e.style.display = 'none', wordBtn.disabled='disabled' ] : [ btn.innerText="내용", e.style.display = 'block', wordBtn.disabled=false ]);
 });        
 wordBtn.addEventListener('click', function(){
-    if(wordBtn.innerText=="보임") {
-        h4.forEach(e => e.style.display = 'none');
-       // div.forEach(e => {[btn.innerText="내용", e.style.display = 'block', wordBtn.disabled=false]});
-    }else{
-        h4.forEach(e => e.style.display = 'block');
-        //div.forEach(e => btn.innerText="내용", e.style.display = 'block', wordBtn.disabled=false);
-    }
-    h4.forEach(e => e.style.display != 'none' ? [ wordBtn.innerText="보임", e.style.display = 'none', btn.disabled='disabled' ] : [ wordBtn.innerText="단어", e.style.display = 'block', btn.disabled=false ]);
+    // if(wordBtn.innerText=="보임") {
+    //     h4.forEach(e => e.style.visibility = 'hidden');
+    //    // div.forEach(e => {[btn.innerText="내용", e.style.display = 'block', wordBtn.disabled=false]});
+    // }else{
+    //     h4.forEach(e => e.style.visibility = 'visible');
+    //     //div.forEach(e => btn.innerText="내용", e.style.display = 'block', wordBtn.disabled=false);
+    // }
+    h4.forEach(e => e.style.visibility != 'hidden' ? [ wordBtn.innerText="보임", e.style.visibility = 'hidden', btn.disabled='disabled' ] : [ wordBtn.innerText="단어", e.style.visibility = 'visible', btn.disabled=false ]);
 });
 
 h4.forEach(
     e => e.addEventListener('click', function(){
-        this.nextElementSibling.style.display != 'none' ? this.nextElementSibling.style.display = 'none' : this.nextElementSibling.style.display = 'block';
+        this.nextElementSibling.style.visibility != 'hidden' ? this.nextElementSibling.style.visibility = 'hidden' : this.nextElementSibling.style.visibility = 'visible';
     })
 );
 
 div.forEach(
     e => e.addEventListener('click', function(){
-        this.previousElementSibling.style.display != 'none' ? this.previousElementSibling.style.display = 'none' : this.previousElementSibling.style.display = 'block';
+        this.previousElementSibling.style.visibility != 'hidden' ? this.previousElementSibling.style.visibility = 'hidden' : this.previousElementSibling.style.visibility = 'visible';
     })
 );
 
