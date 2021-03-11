@@ -40,9 +40,7 @@ div.forEach(
     })
 );
 
-
 function onLoggin(){
-
     const email = document.getElementById("email");
     const password = document.getElementById('pw')
     axios({
