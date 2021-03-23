@@ -234,8 +234,8 @@
             </span>
         </div>
 
-        <h4>16. 다음의 시스템 구조도에서 팬인(Fan-in)이 2 이상인 것을 작성하시오.</h4>        
-        <img src="img/gichul/3.png">
+        <h4>16. 다음의 시스템 구조도에서 팬인(Fan-in)이 2 이상인 것을 작성하시오.<img src="img/gichul/3.png"></h4>        
+        
         <div class="contents">
             <span class="answer">
                 <pre>
@@ -245,19 +245,52 @@
             </span>
         </div>
 
-        <h4>17. 다음의 C 코드의 결과를 쓰시오. (단, 출력문의 출력 서식을 준수하시오.)</h4>
+        <h4>17. 다음의 C 코드의 결과를 쓰시오. (단, 출력문의 출력 서식을 준수하시오.)
+            <pre>
+        #include <stdio.h>
+        void align(int a[ ]) {
+            int temp;
+            for (int i = 0; i < 4; i++) for (int j=0; j < 4 - i; j++) 
+            if (a[j]> a[j+1]) {
+                temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
+            }
+        }
+    
+        main( ) {
+            int a[ ] = { 85, 75, 50, 100, 95 };
+            align(a);
+            for (int i = 0; i < 5; i++) printf("%d ", a[i]);
+        } 
+            </pre>
+        </h4>
         <div class="contents">
             <span class="answer">
                 <pre>
         답:
         50 75 85 95 100
-
-​
                 </pre>
             </span>
         </div>
 
-        <h4>18. 다음의 C 코드의 결과를 쓰시오. (단, 출력문의 출력 서식을 준수하시오.)</h4>
+        <h4>18. 다음의 C 코드의 결과를 쓰시오. (단, 출력문의 출력 서식을 준수하시오.)
+            <pre>
+        #include <stdio.h>
+        main( ) {
+            int c = 1;
+            switch (3) {
+                case 1: c += 3;
+                case 2: c++;
+                case 3: c = 0;
+                case 4: c += 3;
+                case 5: c -= 10;
+            default: c--;
+        }
+            printf("%d", c);
+        }                
+            </pre>
+        </h4>
         <div class="contents">
             <span class="answer">
                 <pre>
