@@ -1,3 +1,13 @@
+
+
+function bottomClick() {
+    bottom = document.body.scrollHeight; 
+    window.scrollTo(0, bottom);
+}
+
+
+
+
 const btn = document.querySelector('.contentBtn');
 const wordBtn = document.querySelector('.wordBtn');
 const div = document.querySelectorAll('.contents');
